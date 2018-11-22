@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
  * @author LAB2-PC
  */
 public class Operaciones {
-    private int n1,n2;
+    double n1, n2, r;     
 
     public Operaciones() {
     }
@@ -21,20 +21,37 @@ public class Operaciones {
         this.n1 = n1;
         this.n2 = n2;
     }
-    public static void suma(){
-        //int su = n1+n2;
-        JOptionPane.showMessageDialog(null,"La suma es: "+(5+2));
+    
+    public Double suma(){  
+      n1= Double.parseDouble(JOptionPane.showInputDialog("Ingrese el primer numero"));         	
+      n2= Double.parseDouble(JOptionPane.showInputDialog("Ingrese el segundo numero"));
+      r= n1+n2;
+      JOptionPane.showInputDialog("La Suma Es: "+ String.valueOf(r));               
+        return r;
     }
-    public static int resta() {
-       int res=8-4;
-        return res;
+    
+    public Double resta(){     
+      n1= Double.parseDouble(JOptionPane.showInputDialog("Ingrese el primer numero"));         	
+      n2= Double.parseDouble(JOptionPane.showInputDialog("Ingrese el segundo numero"));
+      r= n1-n2;
+      JOptionPane.showInputDialog("La Resta Es: "+ String.valueOf(r));               
+      return r;   
     }
-    public void multiplicacion() {
-        JOptionPane.showMessageDialog(null,"La multiplicacion es: "+(5*2));
-       
+        
+     public Double multiplicacion(){
+      n1= Double.parseDouble(JOptionPane.showInputDialog("Ingrese el primer numero"));         	
+      n2= Double.parseDouble(JOptionPane.showInputDialog("Ingrese el segundo numero"));
+      r= n1*n2;
+      JOptionPane.showInputDialog("La Resta Es: "+ String.valueOf(r));               
+      return r;   
     }
-    public int divicion() {
-       int div=10/2;
-        return div;
+        
+     public Double division(){
+      n1= Double.parseDouble(JOptionPane.showInputDialog("Ingrese el primer numero"));         	
+      n2= Double.parseDouble(JOptionPane.showInputDialog("Ingrese el segundo numero"));
+      r= n1/n2;
+      JOptionPane.showInputDialog("La Division Es: "+ String.valueOf(r));               
+      return r;   
     }
+     
 }
